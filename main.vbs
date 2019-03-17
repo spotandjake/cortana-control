@@ -1,4 +1,4 @@
-Dim Arg, root, dir, strText, objFSO, objFolder, objShell, objTextFile, objFile, LocalAppData, oFSO
+Dim Arg, root, dir, strText, objFSO, objFolder, objShell, objTextFile, objFile, LocalAppData, oFSO, FSO, Fso, fso
 Set objFSO = CreateObject("Scripting.FileSystemObject")
 Set objShell = CreateObject("WScript.Shell") 
 Set oFSO = CreateObject("Scripting.FileSystemObject") 
