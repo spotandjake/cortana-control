@@ -1,0 +1,10 @@
+[
+ {
+  "trigger": "keyboard",
+  "command": "start %LocalAppData%\\Cortana-control\\main.vbs",
+  "ground": "foreground",
+  "voice": "",
+  "voiceReply": "",
+  "allowParams": "true"
+ }
+]
