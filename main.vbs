@@ -14,6 +14,9 @@ Set objFile = objFSO.CreateTextFile(LocalAppData & "\Cortana-control" & "\keyboa
 Set objFile = objFSO.CreateTextFile(LocalAppData & "\Cortana-control" & "\x.txt")
 Set objFile = objFSO.CreateTextFile(LocalAppData & "\Cortana-control" & "\y.txt")
 Set objFile = objFSO.CreateTextFile(LocalAppData & "\Cortana-control" & "\click.txt")
+set w = CreateObject("WScript.Shell")
+W.Run chr(34) & LocalAppData & "\Cortana-control\trig.bat" chr(34), 0
+set w= Nothing
 if root = "key" or root = "special" then 
 strText = Arg(1)
 set objFile = nothing
