@@ -1,4 +1,4 @@
-Dim Arg, root, dir, strText, objFSO, objFolder, objShell, objTextFile, objFile, LocalAppData, oFSO, fso
+Dim Arg, root, dir, strText, objFSO, objFolder, objShell, objTextFile, objFile, LocalAppData, oFSO
 Set objFSO = CreateObject("Scripting.FileSystemObject")
 Set objShell = CreateObject("WScript.Shell") 
 Set oFSO = CreateObject("Scripting.FileSystemObject") 
@@ -8,10 +8,11 @@ Set objShell = Nothing
 Set oFSO = Nothing
 Set Arg = WScript.Arguments
 root = Arg(0)
-If fso.FileExists(LocalAppData & "\Cortana-control" & "\keyboard.txt") Then
-    msgbox("hi")
-else
-    Set objFolder = objFSO.GetFolder(LocalAppData & "\Cortana-control")
+DIM fso    
+Set fso = CreateObject("Scripting.FileSystemObject")
+If (fso.FileExists(LocalAppData & "\Cortana-control")) Then
+    msgbox("it's alive")
+Else
     Set objFile = objFSO.CreateTextFile(LocalAppData & "\Cortana-control" & "\keyboard.txt")
     Set objFile = objFSO.CreateTextFile(LocalAppData & "\Cortana-control" & "\x.txt")
     Set objFile = objFSO.CreateTextFile(LocalAppData & "\Cortana-control" & "\y.txt")
