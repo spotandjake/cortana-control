@@ -8,7 +8,7 @@ Set objShell = Nothing
 Set oFSO = Nothing
 Set Arg = WScript.Arguments
 root = Arg(0)
-Set objFolder = objFSO.CreateFolder(LocalAppData & "\Cortana-control")
+objFSO.CreateFolder(LocalAppData & "\Cortana-control")
 Set objFolder = objFSO.GetFolder(LocalAppData & "\Cortana-control")
 Set objFile = objFSO.CreateTextFile(LocalAppData & "\Cortana-control" & "\keyboard.txt")
 Set objFile = objFSO.CreateTextFile(LocalAppData & "\Cortana-control" & "\x.txt")
