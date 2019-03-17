@@ -11,7 +11,6 @@ root = Arg(0)
 If fso.FileExists(LocalAppData & "\Cortana-control" & "\keyboard.txt") Then
     'exist
 else
-    Set objFolder = objFSO.CreateFolder(LocalAppData & "\Cortana-control")
     Set objFolder = objFSO.GetFolder(LocalAppData & "\Cortana-control")
     Set objFile = objFSO.CreateTextFile(LocalAppData & "\Cortana-control" & "\keyboard.txt")
     Set objFile = objFSO.CreateTextFile(LocalAppData & "\Cortana-control" & "\x.txt")
