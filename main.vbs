@@ -8,32 +8,12 @@ Set objShell = Nothing
 Set oFSO = Nothing
 Set Arg = WScript.Arguments
 root = Arg(0)
-msgbox(LocalAppData)
-If objFSO.FolderExists(LocalAppData & "\Cortana-control") Then
-Set objFolder = objFSO.GetFolder(LocalAppData & "\Cortana-control")
-Else
 Set objFolder = objFSO.CreateFolder(LocalAppData & "\Cortana-control")
-End If
-If objFSO.FileExists(LocalAppData & "\Cortana-control" & "\keyboard.txt") Then
 Set objFolder = objFSO.GetFolder(LocalAppData & "\Cortana-control")
-Else
 Set objFile = objFSO.CreateTextFile(LocalAppData & "\Cortana-control" & "\keyboard.txt")
-End If
-If objFSO.FileExists(LocalAppData & "\Cortana-control" & "\x.txt") Then
-Set objFolder = objFSO.GetFolder(LocalAppData & "\Cortana-control")
-Else
 Set objFile = objFSO.CreateTextFile(LocalAppData & "\Cortana-control" & "\x.txt")
-End If
-If objFSO.FileExists(LocalAppData & "\Cortana-control" & "\y.txt") Then
-Set objFolder = objFSO.GetFolder(LocalAppData & "\Cortana-control")
-Else
 Set objFile = objFSO.CreateTextFile(LocalAppData & "\Cortana-control" & "\y.txt")
-End If
-If objFSO.FileExists(LocalAppData & "\Cortana-control" & "\click.txt") Then
-Set objFolder = objFSO.GetFolder(LocalAppData & "\Cortana-control")
-Else
 Set objFile = objFSO.CreateTextFile(LocalAppData & "\Cortana-control" & "\click.txt")
-End If
 if root = "key" or root = "special" then 
 strText = Arg(1)
 set objFile = nothing
