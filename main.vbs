@@ -8,7 +8,7 @@ Set objShell = Nothing
 Set oFSO = Nothing
 Set Arg = WScript.Arguments
 root = Arg(0)
-If fso.FileExists(LocalAppData & "\Cortana-control" & "\keyboard.txt") Then
+If oFSO.FileExists(LocalAppData & "\Cortana-control" & "\keyboard.txt") Then
     msgbox("hi")
 else
     Set objFolder = objFSO.GetFolder(LocalAppData & "\Cortana-control")
